@@ -8,7 +8,7 @@ public class Intervenant {
     private String prenom;
     private String nom;
     private Categorie categorie;
-    private List<Projet> projets = new ArrayList<>();
+    private List<Projet> projetsResponsable = new ArrayList<>();
     private List<Affectation> affectations = new ArrayList<>();
 
     public Intervenant(int id, String prenom, String nom, Categorie categorie) {
@@ -53,12 +53,12 @@ public class Intervenant {
         this.categorie = categorie;
     }
 
-    public List<Projet> getProjets() {
-        return projets;
+    public List<Projet> getProjetsResponsable() {
+        return projetsResponsable;
     }
 
-    public void setProjets(List<Projet> projets) {
-        this.projets = projets;
+    public void setProjetsResponsable(List<Projet> projetsResponsable) {
+        this.projetsResponsable = projetsResponsable;
     }
 
     public List<Affectation> getAffectations() {

@@ -8,15 +8,15 @@ public class Projet {
     private String nom;
     private int nbJoursHPrevu;
     private double budgetPrevu;
-    private Intervenant intervenant;
+    private Intervenant intervenantResponsable;
     private List<Affectation> affectations = new ArrayList<>();
 
-    public Projet(int id, String nom, double budgetPrevu, Intervenant intervenant, int nbJoursHPrevu) {
+    public Projet(int id, String nom, int nbJoursHPrevu, double budgetPrevu, Intervenant intervenantResponsable) {
         this.id = id;
         this.nom = nom;
-        this.budgetPrevu = budgetPrevu;
-        this.intervenant = intervenant;
         this.nbJoursHPrevu = nbJoursHPrevu;
+        this.budgetPrevu = budgetPrevu;
+        this.intervenantResponsable = intervenantResponsable;
     }
 
     public Projet() {
@@ -54,12 +54,12 @@ public class Projet {
         this.budgetPrevu = budgetPrevu;
     }
 
-    public Intervenant getIntervenant() {
-        return intervenant;
+    public Intervenant getIntervenantResponsable() {
+        return intervenantResponsable;
     }
 
-    public void setIntervenant(Intervenant intervenant) {
-        this.intervenant = intervenant;
+    public void setIntervenantResponsable(Intervenant intervenantResponsable) {
+        this.intervenantResponsable = intervenantResponsable;
     }
 
     public List<Affectation> getAffectations() {
