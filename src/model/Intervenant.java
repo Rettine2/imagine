@@ -3,10 +3,11 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Intervenant {
+public abstract class Intervenant {
     private int id;
     private String prenom;
     private String nom;
+
     private Categorie categorie;
     private List<Projet> projetsResponsable = new ArrayList<>();
     private List<Affectation> affectations = new ArrayList<>();
@@ -17,6 +18,8 @@ public class Intervenant {
         this.nom = nom;
         this.categorie = categorie;
     }
+
+    public abstract double calculCoutDuProjet(int nbJours);
 
     public Intervenant() {
     }
