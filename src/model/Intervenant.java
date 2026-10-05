@@ -19,7 +19,7 @@ public abstract class Intervenant {
         this.categorie = categorie;
     }
 
-    public abstract double calculCoutDuProjet(int nbJours);
+    public abstract double calculCoutProjet(int nbJours);
 
     public Intervenant() {
     }
