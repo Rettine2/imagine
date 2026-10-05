@@ -4,16 +4,19 @@ public class Prestataire extends Intervenant {
 
     private boolean forfait;
     private double coutJournalier;
+    private Societe laSociete;
 
     public Prestataire(boolean forfait, double coutJournalier) {
         this.forfait = forfait;
         this.coutJournalier = coutJournalier;
+        this.laSociete = laSociete;
     }
 
     public Prestataire(int id, String prenom, String nom, Categorie categorie, boolean forfait, double coutJournalier) {
         super(id, prenom, nom, categorie);
         this.forfait = forfait;
         this.coutJournalier = coutJournalier;
+        this.laSociete = laSociete;
     }
 
     public Prestataire(int id, String prenom, String nom, Categorie categorie) {
@@ -39,11 +42,19 @@ public class Prestataire extends Intervenant {
         this.coutJournalier = coutJournalier;
     }
 
-    /*public double calculCoutProjet(int nbJours) {
+    public Societe getLaSociete() {
+        return laSociete;
+    }
+
+    public void setLaSociete(Societe laSociete) {
+        this.laSociete = laSociete;
+    }
+
+    public double calculCoutProjet(int nbJours) {
         if (forfait) {
             return nbJours * laSociete.getCoutJournalier();
         } else {
             return nbJours * coutJournalier;
         }
-    }*/
+    }
 }
