@@ -1,19 +1,18 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Affectation {
     private int annee;
     private int semaine;
     private int tempsPasse;
-    private List<Intervenant> intervenants = new ArrayList<>();
-    private List<Projet> projets = new ArrayList<>();
+    private Intervenant intervenant;
+    private Projet projet;
 
-    public Affectation(int annee, int semaine, int tempsPasse) {
+    public Affectation(int annee, int semaine, int tempsPasse, Intervenant intervenant, Projet projet) {
         this.annee = annee;
         this.semaine = semaine;
         this.tempsPasse = tempsPasse;
+        this.intervenant = intervenant;
+        this.projet = projet;
     }
 
     public Affectation() {
@@ -43,21 +42,19 @@ public class Affectation {
         this.tempsPasse = tempsPasse;
     }
 
-    public List<Intervenant> getIntervenants() {
-        return intervenants;
+    public Intervenant getIntervenant() {
+        return intervenant;
     }
 
-    public void setIntervenants(List<Intervenant> intervenants) {
-        this.intervenants = intervenants;
+    public void setIntervenant(Intervenant intervenant) {
+        this.intervenant = intervenant;
     }
 
-    public List<Projet> getProjets() {
-        return projets;
+    public Projet getProjet() {
+        return projet;
     }
 
-    public void setProjets(List<Projet> projets) {
-        this.projets = projets;
+    public void setProjet(Projet projet) {
+        this.projet = projet;
     }
-
-
 }
